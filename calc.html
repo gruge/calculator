@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html"; charset=utf-8" />
+	<title>Формы</title>
+	<script language="javascript">
+	function plus(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=peremennaja1+peremennaja2;	
+		document.anketa.otvet.value=rezultat;
+	}
+	function minus(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=peremennaja1-peremennaja2;	
+		document.anketa.otvet.value=rezultat;
+	}
+	function multiply(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=peremennaja1*peremennaja2;	
+		document.anketa.otvet.value=rezultat;
+	}
+	function divide(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=peremennaja1/peremennaja2;	
+		document.anketa.otvet.value=rezultat;
+	}
+	function power(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=Math.pow(peremennaja1, peremennaja2);
+		document.anketa.otvet.value=rezultat;
+	}
+	function sqrt(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=Math.sqrt(peremennaja1);
+		document.anketa.dva.value="Not Applicable";
+		document.anketa.otvet.value=rezultat;
+	}
+	function cbrt(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat=Math.cbrt(peremennaja1);
+		document.anketa.dva.value="Not Applicable";
+		document.anketa.otvet.value=rezultat;	
+	}
+	function cos(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat = Math.cos(peremennaja1  * (Math.PI / 180)).toFixed(4);
+		document.anketa.dva.value="Not Applicable";
+		document.anketa.otvet.value=rezultat;	
+	}		
+	function sin(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat = Math.sin(peremennaja1  * (Math.PI / 180)).toFixed(4);
+		document.anketa.dva.value="Not Applicable";
+		document.anketa.otvet.value=rezultat;	
+	}		
+	function tan(){
+		peremennaja1=parseFloat(document.anketa.odin.value);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		rezultat = Math.tan(peremennaja1  * (Math.PI / 180)).toFixed(4);
+		document.anketa.dva.value="Not Applicable";
+		document.anketa.otvet.value=rezultat;
+	}
+	function cotan(){
+		peremennaja1=parseFloat(document.anketa.odin.value) * (Math.PI / 180);
+		peremennaja2=parseFloat(document.anketa.dva.value);
+		obama = Math.cos(peremennaja1) / Math.sin(peremennaja1);
+		rezultat = obama.toFixed(4);
+		document.anketa.dva.value="Not Applicable";
+		document.anketa.otvet.value=rezultat;
+	}	
+	</script>
+</head>
+	<body>
+<form name="anketa" method="get" action="">
+	A =<input type="text" name="odin" /><br/>
+	B =<input type="text" name="dva" /><br/>
+	C =<input type="text" name="otvet" /><br/>
+<table>
+<td>
+	<input type="button" value="+" onclick="plus()">
+	<input type="button" value="-" onclick="minus()">
+	<input type="button" value="*" onclick="multiply()">
+	<input type="button" value="/" onclick="divide()">
+	<input type="button" value="^" onclick="power()">
+	<input type="button" value="sqrt" onclick="sqrt()">
+	<input type="button" value="cbrt" onclick="cbrt()"><br/>
+	<input type="button" value="cos" onclick="cos()">
+	<input type="button" value="sin" onclick="sin()">
+	<input type="button" value="tan" onclick="tan()">
+	<input type="button" value="cotan" onclick="cotan()">
+</td>
+</table>
+</form>
+	</body>
+</html>
